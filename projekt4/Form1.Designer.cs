@@ -36,6 +36,8 @@
             checkBox1 = new CheckBox();
             checkBox2 = new CheckBox();
             checkBox3 = new CheckBox();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -80,13 +82,14 @@
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
             button5.TabIndex = 4;
-            button5.Text = "button5";
+            button5.Text = "Load";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(47, 34);
+            checkBox1.Location = new Point(33, 83);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(83, 19);
             checkBox1.TabIndex = 5;
@@ -96,28 +99,39 @@
             // checkBox2
             // 
             checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(45, 65);
+            checkBox2.Location = new Point(33, 108);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(83, 19);
             checkBox2.TabIndex = 6;
             checkBox2.Text = "checkBox2";
             checkBox2.UseVisualStyleBackColor = true;
+            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
             // 
             // checkBox3
             // 
             checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(42, 96);
+            checkBox3.Location = new Point(33, 133);
             checkBox3.Name = "checkBox3";
             checkBox3.Size = new Size(83, 19);
             checkBox3.TabIndex = 7;
             checkBox3.Text = "checkBox3";
             checkBox3.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(334, 83);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(290, 294);
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox1);
             Controls.Add(checkBox3);
             Controls.Add(checkBox2);
             Controls.Add(checkBox1);
@@ -128,6 +142,7 @@
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -142,5 +157,6 @@
         private CheckBox checkBox1;
         private CheckBox checkBox2;
         private CheckBox checkBox3;
+        private PictureBox pictureBox1;
     }
 }
