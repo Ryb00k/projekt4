@@ -80,6 +80,26 @@ namespace projekt4
         private void button3_Click(object sender, EventArgs e)
         {
             pictureBox1.Image.RotateFlip(RotateFlipType.Rotate180FlipNone);
+            Refresh();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Bitmap greenBbm = new Bitmap(pictureBox1.Image);
+            for (int y = 0; y < greenBbm.Height; y++) 
+            {
+                for (int x = 0; x < greenBbm.Width; x++) 
+                {
+                
+                    Color pixel = greenBbm.GetPixel(x,y);
+                    if (pixel.G > 150 && pixel.R < 100 && pixel.B < 100) { 
+                        greenBbm.SetPixel(x, y, Color.Black);
+                    }
+                
+                }
+            }
+            pictureBox1.Image = greenBbm;
+            Refresh();
         }
     }
 }
