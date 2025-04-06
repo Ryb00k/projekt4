@@ -41,7 +41,8 @@ namespace projekt4
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (radioButton1.Checked) {
+            if (radioButton1.Checked)
+            {
                 pictureBox1.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
             }
             else if (radioButton2.Checked)
@@ -52,6 +53,27 @@ namespace projekt4
             {
                 pictureBox1.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
             }
+            Refresh();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            Bitmap bmp = new Bitmap(pictureBox1.Image);
+            for (int y = 0; y < bmp.Height; y++)
+            {
+                for (int x = 0; x < bmp.Width; x++)
+                {
+                    Color originalColor = bmp.GetPixel(x, y);
+                    Color invertedColor = Color.FromArgb(
+                        255 - originalColor.R,
+                        255 - originalColor.G,
+                        255 - originalColor.B
+                    );
+                    bmp.SetPixel(x, y, invertedColor);
+                }
+            }
+            pictureBox1.Image = bmp;
             Refresh();
         }
     }
