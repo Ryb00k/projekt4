@@ -20,7 +20,7 @@ namespace projekt4
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -28,9 +28,31 @@ namespace projekt4
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Title = "Wybierz plik CSV do wczytania";
             openFileDialog1.ShowDialog();
-            if (openFileDialog1.FileName != "") {
+            if (openFileDialog1.FileName != "")
+            {
                 pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
             }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked) {
+                pictureBox1.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+            }
+            else if (radioButton2.Checked)
+            {
+                pictureBox1.Image.RotateFlip(RotateFlipType.Rotate180FlipNone);
+            }
+            else if (radioButton3.Checked)
+            {
+                pictureBox1.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
+            }
+            Refresh();
         }
     }
 }
