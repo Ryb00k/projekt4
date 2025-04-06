@@ -1,13 +1,7 @@
-using Microsoft.VisualBasic;
-
 namespace projekt4
 {
     public partial class Form1 : Form
     {
-        public static class globalVars
-        {
-            public static string path = "";
-        }
         public Form1()
         {
             InitializeComponent();
