@@ -42,7 +42,7 @@
             // 
             button1.Location = new Point(33, 200);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(96, 23);
             button1.TabIndex = 0;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
@@ -51,10 +51,11 @@
             // 
             button2.Location = new Point(33, 239);
             button2.Name = "button2";
-            button2.Size = new Size(75, 23);
+            button2.Size = new Size(96, 23);
             button2.TabIndex = 1;
-            button2.Text = "button2";
+            button2.Text = "Invert Colors";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -78,7 +79,7 @@
             // 
             button5.Location = new Point(33, 354);
             button5.Name = "button5";
-            button5.Size = new Size(75, 23);
+            button5.Size = new Size(96, 23);
             button5.TabIndex = 4;
             button5.Text = "button5";
             button5.UseVisualStyleBackColor = true;
