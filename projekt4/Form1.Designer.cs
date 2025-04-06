@@ -33,9 +33,11 @@
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox3 = new CheckBox();
+            pictureBox1 = new PictureBox();
+            radioButton1 = new RadioButton();
+            radioButton2 = new RadioButton();
+            radioButton3 = new RadioButton();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -44,8 +46,9 @@
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
-            button1.Text = "button1";
+            button1.Text = "Rotate";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -80,47 +83,62 @@
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
             button5.TabIndex = 4;
-            button5.Text = "button5";
+            button5.Text = "Load";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
-            // checkBox1
+            // pictureBox1
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(47, 34);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(83, 19);
-            checkBox1.TabIndex = 5;
-            checkBox1.Text = "checkBox1";
-            checkBox1.UseVisualStyleBackColor = true;
+            pictureBox1.Location = new Point(334, 83);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(290, 294);
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
-            // checkBox2
+            // radioButton1
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(45, 65);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(83, 19);
-            checkBox2.TabIndex = 6;
-            checkBox2.Text = "checkBox2";
-            checkBox2.UseVisualStyleBackColor = true;
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(33, 83);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(37, 19);
+            radioButton1.TabIndex = 9;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "90";
+            radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
-            // checkBox3
+            // radioButton2
             // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(42, 96);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(83, 19);
-            checkBox3.TabIndex = 7;
-            checkBox3.Text = "checkBox3";
-            checkBox3.UseVisualStyleBackColor = true;
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(33, 108);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(43, 19);
+            radioButton2.TabIndex = 10;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "180";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            radioButton3.AutoSize = true;
+            radioButton3.Location = new Point(33, 134);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(43, 19);
+            radioButton3.TabIndex = 11;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "270";
+            radioButton3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(checkBox3);
-            Controls.Add(checkBox2);
-            Controls.Add(checkBox1);
+            Controls.Add(radioButton3);
+            Controls.Add(radioButton2);
+            Controls.Add(radioButton1);
+            Controls.Add(pictureBox1);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -128,6 +146,7 @@
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -139,8 +158,9 @@
         private Button button3;
         private Button button4;
         private Button button5;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
-        private CheckBox checkBox3;
+        private PictureBox pictureBox1;
+        private RadioButton radioButton1;
+        private RadioButton radioButton2;
+        private RadioButton radioButton3;
     }
 }
