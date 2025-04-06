@@ -76,5 +76,10 @@ namespace projekt4
             pictureBox1.Image = bmp;
             Refresh();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image.RotateFlip(RotateFlipType.Rotate180FlipNone);
+        }
     }
 }
